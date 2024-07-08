@@ -135,8 +135,10 @@ plt.xlabel('Distance from Store')
 plt.ylabel('Number of Customers')
 plt.grid(True)
 plt.show()
+```
+"/posts/ci_cust_dist.png"
 
-
+```Python
 sns.countplot(x='gender', data=customer_details)
 plt.title('Distribution of Customers by Gender')
 plt.show()

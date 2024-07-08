@@ -138,31 +138,37 @@ plt.show()
 ```
 ![alt text](/img/posts/ci_cust_dist.png "Coffee & Python - I love them!")
 
-![alt text](/img/posts/coffee_python.jpg "Coffee & Python - I love them!")
-
 ```Python
 sns.countplot(x='gender', data=customer_details)
 plt.title('Distribution of Customers by Gender')
 plt.show()
+
+![alt text](/img/posts/ci_cust_gender.png "Coffee & Python - I love them!")
 
 #analyze sales performance
 sales_by_date = transactions.groupby('transaction_date')['sales_cost'].sum().reset_index()
 plt.plot(sales_by_date['transaction_date'], sales_by_date['sales_cost'])
 plt.title('Sales Trends Over Time')
 plt.show()
-
+```
+![alt text](/img/posts/ci_total_sales.png "Coffee & Python - I love them!")
+```Python
 sales_by_product_area = transactions.merge(product_areas, on='product_area_id') \
                                     .groupby('product_area_name')['sales_cost'].sum().reset_index()
 sns.barplot(x='sales_cost', y='product_area_name', data=sales_by_product_area)
 plt.title('Sales by Product Area')
 plt.show()
-
+```
+![alt text](/img/posts/ci_sales_cat.png "Coffee & Python - I love them!")
+```Pythong
 # evaluate campaign effectiveness
 campaign_performance = campaign_data.groupby(['campaign_name', 'mailer_type'])['signup_flag'].mean().reset_index()
 sns.barplot(x='signup_flag', y='campaign_name', hue='mailer_type', data=campaign_performance)
 plt.title('Campaign Signup Rates by Mailer Type')
 plt.show()
 ```
+![alt text](/img/posts/ci_mailers.png "Coffee & Python - I love them!")
+
 ---
 ## Send the Data to CSV for Tableau
 

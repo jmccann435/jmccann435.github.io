@@ -170,3 +170,7 @@ campaign_data.to_csv('campaign_data.csv', index=False)
 product_areas.to_csv('product_areas.csv', index=False)
 loyalty_scores.to_csv('loyalty_scores.csv', index=False)
 ```
+---
+## Visualize in Tableau
+
+<iframe seamless frameborder="0" src="https://public.tableau.com/views/DSIEarthquakeDashboard/DSIEarthquakeTracker?:embed=yes&:display_count=yes&:showVizHome=no" width = '1090' height = '900'></iframe>

@@ -136,7 +136,7 @@ plt.ylabel('Number of Customers')
 plt.grid(True)
 plt.show()
 ```
-"/posts/ci_cust_dist.png"
+![alt text](img/posts/ci_cust_dist.png "Coffee & Python - I love them!")
 
 ```Python
 sns.countplot(x='gender', data=customer_details)
